@@ -1,0 +1,19 @@
+{
+  "name": "grunz",
+  "version": "1.0.0",
+  "description": "Run grunt from anywhere",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hobart2967/grunz.git"
+  },
+  "author": "Marco Klein @Hobart2967",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hobart2967/grunz/issues"
+  },
+  "homepage": "https://github.com/Hobart2967/grunz#readme"
+}
