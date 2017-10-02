@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.title = 'grunz';
+
+const callingDir = process.cwd();
+
+const fs = require('fs');
+const path = require('path');
+const childProcess = require('child_process');
+const os = require('os');
+const root = (os.platform() == 'win32') ? process.cwd().split(path.sep)[0] : '/'
+
+let lookupDir = callingDir;
+while(lookupDir.replace(/\\|\//g, '') !== root && !fs.existsSync(path.join(lookupDir, 'node_modules', 'grunt'))) {
+	lookupDir = path.dirname(lookupDir);
+}
+
+if(!fs.existsSync(path.join(lookupDir, 'node_modules', 'grunt'))) {
+
+
+	var globalNodeModules = childProcess.execSync('npm root -g').toString().trim();
+	var packageDir = path.join(globalNodeModules, 'grunt');
+	
+	lookupDir = path.join(globalNodeModules, '..');
+	if (!fs.existsSync(packageDir)) {
+		console.log('Grunt not found. Please install grunt locally or globally.');
+		return;
+	}	
+}
+
+// Everything looks good. Require local grunt and run it.
+require(path.join(lookupDir, 'node_modules', 'grunt')).cli();
+
+
+
+
+
+

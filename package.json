@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Hobart2967/grunz/issues"
   },
+  "bin": {
+    "grunz": "bin/grunz"
+  }
   "homepage": "https://github.com/Hobart2967/grunz#readme"
 }
