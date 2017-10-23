@@ -1,6 +1,6 @@
 {
   "name": "grunz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run grunt from anywhere",
   "main": "index.js",
   "scripts": {
@@ -13,10 +13,10 @@
   "author": "Marco Klein @Hobart2967",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hobart2967/grunz/issues"
+    "url": "https://github.com/Hobart2967/grunz/issues"	
   },
   "bin": {
     "grunz": "bin/grunz"
-  }
+  },
   "homepage": "https://github.com/Hobart2967/grunz#readme"
 }
